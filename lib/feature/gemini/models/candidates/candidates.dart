@@ -1,4 +1,4 @@
-import 'package:ai_buddy/feature/gemini/models/content/content.dart';
+import 'package:brainify/feature/gemini/models/content/content.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

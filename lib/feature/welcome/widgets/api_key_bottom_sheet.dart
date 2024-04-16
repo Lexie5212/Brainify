@@ -1,7 +1,7 @@
-import 'package:ai_buddy/core/extension/context.dart';
-import 'package:ai_buddy/core/navigation/route.dart';
-import 'package:ai_buddy/core/ui/input/input_field.dart';
-import 'package:ai_buddy/core/util/secure_storage.dart';
+import 'package:brainify/core/extension/context.dart';
+import 'package:brainify/core/navigation/route.dart';
+import 'package:brainify/core/ui/input/input_field.dart';
+import 'package:brainify/core/util/secure_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';

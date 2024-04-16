@@ -1,4 +1,4 @@
-import 'package:ai_buddy/core/extension/string.dart';
+import 'package:brainify/core/extension/string.dart';
 import 'package:flutter/material.dart';
 
 abstract class Validators {

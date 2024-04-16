@@ -30,7 +30,7 @@ if (keystorePropertiesFile.exists()) {
    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
 android {
-    namespace "com.superawesomeapps.ai_buddy"
+    namespace "com.superawesomeapps.brainify"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -48,7 +48,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.superawesomeapps.ai_buddy"
+        applicationId "com.superawesomeapps.brainify"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
@@ -68,6 +68,11 @@ android {
     buildTypes {
         release {
             signingConfig signingConfigs.release
+        }
+    }
+    allprojects {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:deprecation"
         }
     }
 }

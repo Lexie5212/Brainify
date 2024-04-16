@@ -1,5 +1,5 @@
-name: ai_buddy
-description: AI Buddy app.
+name: brainify
+description: Brainify app.
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
@@ -25,7 +25,7 @@ dependencies:
   json_annotation: ^4.8.1
   dio: ^5.4.0
   path_provider: ^2.1.2
-  flutter_secure_storage: ^4.2.1
+  flutter_secure_storage: ^9.0.0
   flutter_riverpod: ^2.4.10
   riverpod_annotation: ^2.3.4
   file_picker: ^6.1.1
@@ -55,4 +55,3 @@ flutter:
   assets:
     - assets/fonts/
     - assets/images/
-    - assets/animations/

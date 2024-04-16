@@ -1,5 +1,5 @@
-import 'package:ai_buddy/core/app/style.dart';
-import 'package:ai_buddy/core/navigation/router.dart';
+import 'package:brainify/core/app/style.dart';
+import 'package:brainify/core/navigation/router.dart';
 import 'package:flutter/material.dart';
 
 class AIBuddy extends StatelessWidget {

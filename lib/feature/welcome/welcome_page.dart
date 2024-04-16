@@ -1,7 +1,7 @@
-import 'package:ai_buddy/core/config/assets_constants.dart';
-import 'package:ai_buddy/core/extension/context.dart';
-import 'package:ai_buddy/feature/home/widgets/background_curves_painter.dart';
-import 'package:ai_buddy/feature/welcome/widgets/api_key_bottom_sheet.dart';
+import 'package:brainify/core/config/assets_constants.dart';
+import 'package:brainify/core/extension/context.dart';
+import 'package:brainify/feature/home/widgets/background_curves_painter.dart';
+import 'package:brainify/feature/welcome/widgets/api_key_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -13,6 +13,7 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
+        
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: Stack(
@@ -21,8 +22,8 @@ class WelcomePage extends StatelessWidget {
                 left: -300,
                 top: -00,
                 child: Container(
-                  height: 500,
-                  width: 600,
+                  height: 300,
+                  width: 400,
                   decoration: BoxDecoration(
                     gradient: RadialGradient(
                       colors: [
@@ -56,42 +57,46 @@ class WelcomePage extends StatelessWidget {
                           vertical: 8,
                         ),
                         decoration: BoxDecoration(
-                          color: context.colorScheme.onSurface,
+                          color: context.colorScheme.background,
                           borderRadius: BorderRadius.circular(30),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.white.withOpacity(0.25),
-                              offset: const Offset(4, 4),
-                              blurRadius: 8,
-                            ),
-                          ],
+                          // boxShadow: [
+                          //   BoxShadow(
+                          //     color: Colors.white.withOpacity(0.25),
+                          //     offset: const Offset(4, 4),
+                          //     blurRadius: 8,
+                          //   ),
+                          // ],
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              'Personal AI Buddy',
+                              'Keep up with BrainKitty',
                               style: TextStyle(
-                                color: context.colorScheme.background,
+                                color: context.colorScheme.onSurface,
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             const SizedBox(width: 4),
                             Image.asset(
-                              AssetConstants.aiStarLogo,
+                              AssetConstants.aiKittyLogo,
                               scale: 23,
                             ),
                           ],
                         ),
                       ),
                     ),
-                    Lottie.asset(
-                      AssetConstants.onboardingAnimation,
-                    ),
+                    Expanded(
+                      child: Lottie.asset(AssetConstants.onboardingLogo),
+                      ),
+
+                    // Lottie.asset(
+                    //   AssetConstants.onboardingLogo,
+                    // ),
                     Text(
-                      'Chat with PDF & Images!',
+                      'Think Analyze Discover with Brainify',
                       style: context.textTheme.bodyLarge!.copyWith(
                         fontSize: 32,
                         fontWeight: FontWeight.w600,
@@ -124,7 +129,7 @@ class WelcomePage extends StatelessWidget {
                         minimumSize: const Size(double.infinity, 56),
                       ),
                       child: Text(
-                        'Get Started',
+                        'Try BrainKitty!',
                         style: context.textTheme.labelLarge!.copyWith(
                           color: context.colorScheme.surface,
                         ),

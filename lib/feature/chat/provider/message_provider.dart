@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import 'package:ai_buddy/core/config/type_of_bot.dart';
-import 'package:ai_buddy/core/config/type_of_message.dart';
-import 'package:ai_buddy/core/logger/logger.dart';
-import 'package:ai_buddy/feature/gemini/gemini.dart';
-import 'package:ai_buddy/feature/hive/model/chat_bot/chat_bot.dart';
-import 'package:ai_buddy/feature/hive/model/chat_message/chat_message.dart';
-import 'package:ai_buddy/feature/hive/repository/hive_repository.dart';
+import 'package:brainify/core/config/type_of_bot.dart';
+import 'package:brainify/core/config/type_of_message.dart';
+import 'package:brainify/core/logger/logger.dart';
+import 'package:brainify/feature/gemini/gemini.dart';
+import 'package:brainify/feature/hive/model/chat_bot/chat_bot.dart';
+import 'package:brainify/feature/hive/model/chat_message/chat_message.dart';
+import 'package:brainify/feature/hive/repository/hive_repository.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:uuid/uuid.dart';

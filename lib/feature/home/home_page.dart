@@ -1,15 +1,15 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:ai_buddy/core/config/assets_constants.dart';
-import 'package:ai_buddy/core/config/type_of_bot.dart';
-import 'package:ai_buddy/core/extension/context.dart';
-import 'package:ai_buddy/core/navigation/route.dart';
-import 'package:ai_buddy/core/util/secure_storage.dart';
-import 'package:ai_buddy/feature/chat/provider/message_provider.dart';
-import 'package:ai_buddy/feature/hive/model/chat_bot/chat_bot.dart';
-import 'package:ai_buddy/feature/home/provider/chat_bot_provider.dart';
-import 'package:ai_buddy/feature/home/widgets/widgets.dart';
-import 'package:ai_buddy/feature/welcome/widgets/api_key_bottom_sheet.dart';
+import 'package:brainify/core/config/assets_constants.dart';
+import 'package:brainify/core/config/type_of_bot.dart';
+import 'package:brainify/core/extension/context.dart';
+import 'package:brainify/core/navigation/route.dart';
+import 'package:brainify/core/util/secure_storage.dart';
+import 'package:brainify/feature/chat/provider/message_provider.dart';
+import 'package:brainify/feature/hive/model/chat_bot/chat_bot.dart';
+import 'package:brainify/feature/home/provider/chat_bot_provider.dart';
+import 'package:brainify/feature/home/widgets/widgets.dart';
+import 'package:brainify/feature/welcome/widgets/api_key_bottom_sheet.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

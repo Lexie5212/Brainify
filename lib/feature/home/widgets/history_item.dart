@@ -1,8 +1,8 @@
-import 'package:ai_buddy/core/extension/context.dart';
-import 'package:ai_buddy/core/navigation/route.dart';
-import 'package:ai_buddy/feature/chat/provider/message_provider.dart';
-import 'package:ai_buddy/feature/hive/model/chat_bot/chat_bot.dart';
-import 'package:ai_buddy/feature/home/provider/chat_bot_provider.dart';
+import 'package:brainify/core/extension/context.dart';
+import 'package:brainify/core/navigation/route.dart';
+import 'package:brainify/feature/chat/provider/message_provider.dart';
+import 'package:brainify/feature/hive/model/chat_bot/chat_bot.dart';
+import 'package:brainify/feature/home/provider/chat_bot_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

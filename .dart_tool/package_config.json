@@ -315,7 +315,37 @@
     },
     {
       "name": "flutter_secure_storage",
-      "rootUri": "file:///Users/lixiaolu/.pub-cache/hosted/pub.dev/flutter_secure_storage-4.2.1",
+      "rootUri": "file:///Users/lixiaolu/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_linux",
+      "rootUri": "file:///Users/lixiaolu/.pub-cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_macos",
+      "rootUri": "file:///Users/lixiaolu/.pub-cache/hosted/pub.dev/flutter_secure_storage_macos-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_platform_interface",
+      "rootUri": "file:///Users/lixiaolu/.pub-cache/hosted/pub.dev/flutter_secure_storage_platform_interface-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_web",
+      "rootUri": "file:///Users/lixiaolu/.pub-cache/hosted/pub.dev/flutter_secure_storage_web-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_windows",
+      "rootUri": "file:///Users/lixiaolu/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -980,13 +1010,13 @@
       "languageVersion": "2.19"
     },
     {
-      "name": "ai_buddy",
+      "name": "brainify",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2024-04-16T06:32:53.856216Z",
+  "generated": "2024-04-16T22:15:17.345341Z",
   "generator": "pub",
   "generatorVersion": "3.3.3"
 }

@@ -1,12 +1,12 @@
 import 'dart:io';
 
-import 'package:ai_buddy/core/config/assets_constants.dart';
-import 'package:ai_buddy/core/config/type_of_bot.dart';
-import 'package:ai_buddy/core/extension/context.dart';
-import 'package:ai_buddy/feature/chat/provider/message_provider.dart';
-import 'package:ai_buddy/feature/chat/widgets/chat_interface_widget.dart';
-import 'package:ai_buddy/feature/home/provider/chat_bot_provider.dart';
-import 'package:ai_buddy/feature/home/widgets/widgets.dart';
+import 'package:brainify/core/config/assets_constants.dart';
+import 'package:brainify/core/config/type_of_bot.dart';
+import 'package:brainify/core/extension/context.dart';
+import 'package:brainify/feature/chat/provider/message_provider.dart';
+import 'package:brainify/feature/chat/widgets/chat_interface_widget.dart';
+import 'package:brainify/feature/home/provider/chat_bot_provider.dart';
+import 'package:brainify/feature/home/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:flutter_riverpod/flutter_riverpod.dart';

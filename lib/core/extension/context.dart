@@ -1,4 +1,4 @@
-import 'package:ai_buddy/core/ui/widget/responsive.dart';
+import 'package:brainify/core/ui/widget/responsive.dart';
 import 'package:flutter/material.dart';
 
 extension Context on BuildContext {

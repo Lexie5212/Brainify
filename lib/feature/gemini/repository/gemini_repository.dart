@@ -4,10 +4,10 @@ import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
 
-import 'package:ai_buddy/core/logger/logger.dart';
-import 'package:ai_buddy/core/util/secure_storage.dart';
-import 'package:ai_buddy/feature/gemini/gemini.dart';
-import 'package:ai_buddy/feature/gemini/repository/base_gemini_repository.dart';
+import 'package:brainify/core/logger/logger.dart';
+import 'package:brainify/core/util/secure_storage.dart';
+import 'package:brainify/feature/gemini/gemini.dart';
+import 'package:brainify/feature/gemini/repository/base_gemini_repository.dart';
 import 'package:dio/dio.dart';
 
 class GeminiRepository extends BaseGeminiRepository {

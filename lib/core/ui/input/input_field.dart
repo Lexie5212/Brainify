@@ -1,5 +1,5 @@
-import 'package:ai_buddy/core/extension/context.dart';
-import 'package:ai_buddy/core/util/validators.dart';
+import 'package:brainify/core/extension/context.dart';
+import 'package:brainify/core/util/validators.dart';
 import 'package:flutter/material.dart';
 
 class InputField extends StatefulWidget {
