@@ -175,7 +175,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    'Personal AI Buddy',
+                                    'Keep up with BrainKitty',
                                     style: TextStyle(
                                       color: context.colorScheme.background,
                                       fontSize: 14,
@@ -184,7 +184,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                                   ),
                                   const SizedBox(width: 4),
                                   Image.asset(
-                                    AssetConstants.aiStarLogo,
+                                    AssetConstants.aiKittyLogo,
                                     scale: 23,
                                   ),
                                 ],

@@ -13,7 +13,6 @@ class WelcomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
-        
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: Stack(
@@ -22,8 +21,8 @@ class WelcomePage extends StatelessWidget {
                 left: -300,
                 top: -00,
                 child: Container(
-                  height: 300,
-                  width: 400,
+                  height: 500,
+                  width: 600,
                   decoration: BoxDecoration(
                     gradient: RadialGradient(
                       colors: [
@@ -88,13 +87,9 @@ class WelcomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Expanded(
-                      child: Lottie.asset(AssetConstants.onboardingLogo),
-                      ),
-
-                    // Lottie.asset(
-                    //   AssetConstants.onboardingLogo,
-                    // ),
+                    Image.asset(
+                      AssetConstants.onboardingLogo,
+                    ),
                     Text(
                       'Think Analyze Discover with Brainify',
                       style: context.textTheme.bodyLarge!.copyWith(
