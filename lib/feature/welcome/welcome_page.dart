@@ -3,7 +3,6 @@ import 'package:brainify/core/extension/context.dart';
 import 'package:brainify/feature/home/widgets/background_curves_painter.dart';
 import 'package:brainify/feature/welcome/widgets/api_key_bottom_sheet.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
