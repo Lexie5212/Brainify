@@ -160,7 +160,8 @@ class _HomePageState extends ConsumerState<HomePage> {
                                 vertical: 8,
                               ),
                               decoration: BoxDecoration(
-                                color: context.colorScheme.onSurface,
+                                //color: context.colorScheme. background,
+                                color: Color(0xFFF4EFF4),
                                 borderRadius: BorderRadius.circular(30),
                                 boxShadow: [
                                   BoxShadow(
@@ -177,7 +178,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                                   Text(
                                     'Keep up with BrainKitty',
                                     style: TextStyle(
-                                      color: context.colorScheme.background,
+                                      color: context.colorScheme.onBackground,
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -250,7 +251,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                           children: [
                             Expanded(
                               child: CardButton(
-                                title: 'Chat\nwith PDF',
+                                title: 'Chat with PDF',
                                 color: context.colorScheme.primary,
                                 imagePath: AssetConstants.pdfLogo,
                                 isMainButton: true,

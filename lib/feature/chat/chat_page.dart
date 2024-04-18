@@ -108,7 +108,7 @@ class ChatPage extends ConsumerWidget {
                           ),
                           child: Center(
                             child: Text(
-                              '$title Buddy',
+                              '$title BrainKitty',
                               style: TextStyle(
                                 color: context.colorScheme.surface,
                                 fontSize: 14,

@@ -1,40 +1,41 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final darkTheme = _getTheme();
 
-const _primary = Color(0xFFC5F432);
-const _secondary = Color(0xFFC09FF8);
-const _tertiary = Color(0xFFFEC4DD);
+const _primary = Color(0x79AAD3F4);
+const _secondary = Color(0x4437F3A8);
+const _tertiary = Color(0x40DE6E6E);
 
-const _background = Color(0xFF010201);
+const _background = Color(0xffF9FAFB);
 const _onBackground = Color(0xff171717);
-const _lightest = Color(0xffF9FAFB);
+const _darkest = Color(0xFF010201);
 
-const _darkest = Colors.black;
-const _disabled = Colors.grey;
+const _lightest = Colors.white;
+const _disabled = Color(0xFFF8F1F1);
 
 const _divider = Color(0xff363635);
 const _red = Colors.red;
 
 final _darkColorScheme = ColorScheme(
-  brightness: Brightness.dark,
+  brightness: Brightness.light,
   // Primary
   primary: _primary,
-  onPrimary: _lightest,
-  primaryContainer: _primary.withOpacity(0.2),
-  onPrimaryContainer: _lightest,
+  onPrimary: _darkest,
+  primaryContainer: _primary.withOpacity(0.1),
+  onPrimaryContainer: _darkest,
   // Secondary
   secondary: _secondary,
-  onSecondary: _lightest,
-  secondaryContainer: _secondary.withOpacity(0.2),
-  onSecondaryContainer: _lightest,
+  onSecondary: _darkest,
+  secondaryContainer: _secondary.withOpacity(0.1),
+  onSecondaryContainer: _darkest,
 
   // Tertiary
   tertiary: _tertiary,
-  onTertiary: _lightest,
-  tertiaryContainer: _tertiary.withOpacity(0.2),
-  onTertiaryContainer: _lightest,
+  onTertiary: _darkest,
+  tertiaryContainer: _tertiary.withOpacity(0.1),
+  onTertiaryContainer: _darkest,
 
   // Error
   error: _red,
@@ -43,8 +44,8 @@ final _darkColorScheme = ColorScheme(
   background: _background,
   onBackground: _onBackground,
   // Surface
-  surface: _darkest,
-  onSurface: _lightest,
+  surface: _lightest,
+  onSurface: _darkest,
   // Outline
   outline: _divider,
 );
@@ -68,7 +69,7 @@ ThemeData _getTheme() {
 
   return ThemeData(
     useMaterial3: true,
-    brightness: Brightness.dark,
+    brightness: Brightness.light,
     colorScheme: colorScheme,
     textTheme: textTheme,
     primaryTextTheme: primaryTextTheme,
@@ -100,9 +101,9 @@ ThemeData _getTheme() {
       margin: EdgeInsets.zero,
     ),
     textSelectionTheme: TextSelectionThemeData(
-      cursorColor: _lightest,
-      selectionColor: _lightest.withOpacity(0.5),
-      selectionHandleColor: _lightest,
+      cursorColor: _darkest,
+      selectionColor: _darkest.withOpacity(0.5),
+      selectionHandleColor: _darkest,
     ),
     popupMenuTheme: PopupMenuThemeData(
       color: _background,
@@ -160,13 +161,13 @@ ThemeData _getTheme() {
       ),
       hintStyle: textTheme.bodyLarge,
       labelStyle: textTheme.bodyLarge!.copyWith(
-        color: Colors.white70,
+        color: Colors.black,
         fontWeight: FontWeight.normal,
       ),
     ),
     floatingActionButtonTheme: FloatingActionButtonThemeData(
       backgroundColor: colorScheme.secondary,
-      foregroundColor: Colors.black,
+      foregroundColor: Colors.white,
       iconSize: 24,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(60),
@@ -207,17 +208,17 @@ ThemeData _getTheme() {
 }
 
 TextTheme _getTextTheme(ColorScheme colorScheme) {
-  const headlineColor = _lightest;
+  const headlineColor = _darkest;
   const headlineWeight = FontWeight.w900;
   const headlineHeight = 1.2;
   const headlineLetterSpacing = 2.5;
 
-  const titleColor = _lightest;
+  const titleColor = _darkest;
   const titleWeight = FontWeight.bold;
   const titleHeight = 1.2;
   const titleLetterSpacing = -0.96;
 
-  const bodyColor = _lightest;
+  const bodyColor = _darkest;
   const bodyWeight = FontWeight.normal;
   const bodyHeight = 1.5;
   const bodyLetterSpacing = 0.0;

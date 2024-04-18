@@ -3,6 +3,7 @@ import 'package:brainify/core/navigation/route.dart';
 import 'package:brainify/feature/chat/provider/message_provider.dart';
 import 'package:brainify/feature/hive/model/chat_bot/chat_bot.dart';
 import 'package:brainify/feature/home/provider/chat_bot_provider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -23,21 +24,33 @@ class HistoryItem extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
-      child: ElevatedButton(
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+        boxShadow:[
+          BoxShadow(
+            color: Colors.white.withOpacity(0.25),
+            offset: const Offset(4, 4),
+            blurRadius: 8,
+           ),
+        ],
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child:ElevatedButton(
         onPressed: () {
           ref.read(messageListProvider.notifier).updateChatBot(chatBot);
           AppRoute.chat.push(context);
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: context.colorScheme.onBackground,
+          //backgroundColor: context.colorScheme.onBackground,
+          backgroundColor:const Color(0xFFF1E9F2),
           foregroundColor: color,
-          elevation: 0,
+          elevation: 4,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16),
-            side: BorderSide(
-              color: context.colorScheme.outline,
-              width: 0.5,
-            ),
+            // side: BorderSide(
+            //   color: context.colorScheme.outline,
+            //   width: 0,
+            // ),
           ),
           padding: const EdgeInsets.all(8),
         ),
@@ -77,6 +90,7 @@ class HistoryItem extends ConsumerWidget {
           ],
         ),
       ),
+      ), 
     );
   }
 }
