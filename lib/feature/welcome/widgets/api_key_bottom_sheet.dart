@@ -216,7 +216,7 @@ class _APIKeyBottomSheetState extends State<APIKeyBottomSheet> {
                       Navigator.pop(context); // 关闭AlertDialog并返回
                     },
                     style: TextButton.styleFrom(
-                      backgroundColor: Colors.white,
+                      backgroundColor: context.colorScheme.onSurface,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -225,7 +225,7 @@ class _APIKeyBottomSheetState extends State<APIKeyBottomSheet> {
                     child: Text(
                       'Close',
                        style: context.textTheme.labelLarge!.copyWith(
-                              color: context.colorScheme.surface,
+                              color: context.colorScheme.background,
                             ),
                       ),
                   ),

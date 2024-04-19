@@ -13,7 +13,7 @@ class WelcomePage extends StatelessWidget {
       resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.all(0),
           child: Stack(
             children: [
               Positioned(
