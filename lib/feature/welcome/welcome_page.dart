@@ -57,13 +57,6 @@ class WelcomePage extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: context.colorScheme.background,
                           borderRadius: BorderRadius.circular(30),
-                          // boxShadow: [
-                          //   BoxShadow(
-                          //     color: Colors.white.withOpacity(0.25),
-                          //     offset: const Offset(4, 4),
-                          //     blurRadius: 8,
-                          //   ),
-                          // ],
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
