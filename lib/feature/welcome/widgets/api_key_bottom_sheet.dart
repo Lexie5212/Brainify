@@ -1,9 +1,10 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:brainify/core/extension/context.dart';
 import 'package:brainify/core/navigation/route.dart';
 import 'package:brainify/core/ui/input/input_field.dart';
 import 'package:brainify/core/util/secure_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class APIKeyBottomSheet extends StatefulWidget {
@@ -105,7 +106,7 @@ class _APIKeyBottomSheetState extends State<APIKeyBottomSheet> {
                       Navigator.pop(context); 
                     },
                     style: TextButton.styleFrom(
-                      backgroundColor: context.colorScheme.onSurface,
+                      backgroundColor: context.colorScheme.onBackground,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),

@@ -1,3 +1,4 @@
+
 import 'package:brainify/core/config/type_of_message.dart';
 import 'package:brainify/core/extension/context.dart';
 import 'package:brainify/feature/chat/provider/message_provider.dart';
@@ -21,8 +22,18 @@ class ChatInterfaceWidget extends ConsumerWidget {
   final Color color;
   final String imagePath;
 
+  Color _getAdjustedColor(BuildContext context) {
+    return Theme.of(context).brightness == 
+    Brightness.dark ? color.withOpacity(0.7) : color;
+  }
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final Color adjustedColor = _getAdjustedColor(context);
+    final Color InputTextColor = 
+      Theme.of(context).brightness == Brightness.light
+        ? Colors.indigo // Light mode background color
+        : Colors.pink.shade50; // Dark mode background color
     return Chat(
       messages: messages,
       onSendPressed: (text) =>
@@ -35,7 +46,7 @@ class ChatInterfaceWidget extends ConsumerWidget {
       avatarBuilder: (user) => Padding(
         padding: const EdgeInsets.only(right: 8),
         child: CircleAvatar(
-          backgroundColor: color,
+          backgroundColor: adjustedColor,
           radius: 19,
           child: Padding(
             padding: const EdgeInsets.all(8),
@@ -48,13 +59,15 @@ class ChatInterfaceWidget extends ConsumerWidget {
       ),
       theme: DefaultChatTheme(
         backgroundColor: Colors.transparent,
-        primaryColor: context.colorScheme.onSurface,
+        primaryColor: context.colorScheme.onSurfaceVariant,
         secondaryColor: color,
-        inputBackgroundColor: context.colorScheme.onBackground,
-        inputTextColor: context.colorScheme.onSurface,
+        inputBackgroundColor: context.colorScheme.onSurfaceVariant,
+        inputTextColor:InputTextColor,
+
         sendingIcon: Icon(
           Icons.send,
           color: context.colorScheme.onSurface,
+
         ),
         inputTextCursorColor: context.colorScheme.onSurface,
         receivedMessageBodyTextStyle: TextStyle(
@@ -63,8 +76,8 @@ class ChatInterfaceWidget extends ConsumerWidget {
           fontWeight: FontWeight.w500,
           height: 1.5,
         ),
-        sentMessageBodyTextStyle: TextStyle(
-          color: context.colorScheme.onBackground,
+        sentMessageBodyTextStyle: const TextStyle(
+          color: Color(0xFF435D6A),
           fontSize: 16,
           fontWeight: FontWeight.w500,
           height: 1.5,
@@ -75,17 +88,18 @@ class ChatInterfaceWidget extends ConsumerWidget {
           fontWeight: FontWeight.w800,
           height: 1.333,
         ),
-        inputTextStyle: TextStyle(
+        inputTextStyle: const TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.w500,
           height: 1.5,
-          color: context.colorScheme.onSurface,
+          color:Colors.purple,
+
         ),
         inputTextDecoration: InputDecoration(
           border: InputBorder.none,
           contentPadding: EdgeInsets.zero,
           isCollapsed: true,
-          fillColor: context.colorScheme.onBackground,
+          fillColor: context.colorScheme.background,
         ),
         inputBorderRadius: const BorderRadius.vertical(
           top: Radius.circular(20),

@@ -1,5 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
+import 'package:brainify/core/app/theme_provider.dart';
 import 'package:brainify/core/config/assets_constants.dart';
 import 'package:brainify/core/config/type_of_bot.dart';
 import 'package:brainify/core/extension/context.dart';
@@ -110,6 +111,16 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     final chatBotsList = ref.watch(chatBotListProvider);
 
+    // Determine the container's decoration properties based on the theme mode
+    final Color backgroundColor = 
+      Theme.of(context).brightness == Brightness.light
+        ? context.colorScheme.onSurfaceVariant // Light mode background color
+        : context.colorScheme.surfaceTint; // Dark mode background color
+    // ignore: lines_longer_than_80_chars, non_constant_identifier_names
+    final Color TextStyleColor = Theme.of(context).brightness == Brightness.light
+        ? Colors.black // Light mode shadow color
+        : Colors.white; // Dark mode shadow color
+
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: _isBuildingChatBot
@@ -151,8 +162,18 @@ class _HomePageState extends ConsumerState<HomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const SizedBox(
-                              width: 60,
+                            IconButton(
+                              icon: Icon(
+                                Icons.brightness_6,
+                                size: 20,
+                                color: 
+                                  Theme.of(context).brightness 
+                                    == Brightness.light
+                                    ? Colors.grey // Color for light mode
+                                    : Colors.white, // Color for dark mode
+                              ),
+                              onPressed: () => 
+                                ref.read(themeProvider.notifier).toggleTheme(),
                             ),
                             Container(
                               padding: const EdgeInsets.symmetric(
@@ -160,7 +181,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                                 vertical: 8,
                               ),
                               decoration: BoxDecoration(
-                                color: context.colorScheme.background,
+                                color: backgroundColor,
                                 borderRadius: BorderRadius.circular(30),
                                 boxShadow: [
                                   BoxShadow(
@@ -239,14 +260,15 @@ class _HomePageState extends ConsumerState<HomePage> {
                              Container(
                                 width: 72,
                                 height: 72,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage(AssetConstants.aiKittyLogo),
+                                    image: 
+                                      AssetImage(AssetConstants.aiKittyLogo),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 8), // Add some space between the image and the text
+                              const SizedBox(width: 8),
                               Text(
                                 'Share Puzzles\nwith BrainKitty',
                                 style: Theme.of(context)
@@ -341,18 +363,18 @@ class _HomePageState extends ConsumerState<HomePage> {
                                           .read(messageListProvider.notifier)
                                           .updateChatBot(chatBot);
                                       AppRoute.chat.push(context);
-        },
-      ),
-    ),
-    const SizedBox(height: 8),
-    Flexible(
-      child: CardButton(
-        title: 'Feed BrainKitty with Image',
-        color: context.colorScheme.tertiary,
-        imagePath: AssetConstants.imageLogo,
-        isMainButton: false,
-        onPressed: () async {
-          final pickedFile = await ref
+                                    },
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                Flexible(
+                                  child: CardButton(
+                                    title: 'Feed BrainKitty with Image',
+                                    color: context.colorScheme.tertiary,
+                                    imagePath: AssetConstants.imageLogo,
+                                    isMainButton: false,
+                                    onPressed: () async {
+                                      final pickedFile = await ref
                                           .read(chatBotListProvider.notifier)
                                           .attachImageFilePath();
                                       if (pickedFile != null) {
@@ -371,13 +393,11 @@ class _HomePageState extends ConsumerState<HomePage> {
                                             .updateChatBot(chatBot);
                                         AppRoute.chat.push(context);
                                       }
-        },
-      ),
-    ),
-  ],
-),
-
-
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
                         const SizedBox(height: 16),
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

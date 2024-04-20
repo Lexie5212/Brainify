@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-final darkTheme = _getTheme();
+
+final lightTheme = _getTheme();
 
 const _primary = Color(0x79AAD3F4);
 const _secondary = Color(0x4437F3A8);
@@ -10,6 +10,7 @@ const _tertiary = Color(0x40DE6E6E);
 
 const _background = Color(0xffF9FAFB);
 const _onBackground = Color(0xff171717);
+const _onSurfaceVariant = Color(0xFFF4EFF4);
 const _darkest = Color(0xFF010201);
 
 const _lightest = Colors.white;
@@ -18,7 +19,7 @@ const _disabled = Color(0xFFF8F1F1);
 const _divider = Color(0xff363635);
 const _red = Colors.red;
 
-final _darkColorScheme = ColorScheme(
+final _lightColorScheme = ColorScheme(
   brightness: Brightness.light,
   // Primary
   primary: _primary,
@@ -46,12 +47,13 @@ final _darkColorScheme = ColorScheme(
   // Surface
   surface: _lightest,
   onSurface: _darkest,
+  onSurfaceVariant:_onSurfaceVariant,
   // Outline
   outline: _divider,
 );
 
 ThemeData _getTheme() {
-  final colorScheme = _darkColorScheme;
+  final colorScheme = _lightColorScheme;
   final textTheme = _getTextTheme(colorScheme);
   final primaryTextTheme = textTheme.apply(
     displayColor: colorScheme.onPrimary,

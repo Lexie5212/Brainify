@@ -1,15 +1,20 @@
-import 'package:brainify/core/app/style.dart';
+import 'package:brainify/core/app/theme_provider.dart';
 import 'package:brainify/core/navigation/router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AIBuddy extends StatelessWidget {
-  const AIBuddy({super.key});
+// class Brainify extends StatelessWidget {
+//   const Brainify({super.key});
+class Brainify extends ConsumerWidget {
+  const Brainify({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final theme = ref.watch(themeProvider);
+    
     return MaterialApp.router(
       title: 'Brainify',
-      theme: darkTheme,
+      theme: theme,
       debugShowCheckedModeBanner: false,
       routerConfig: router,
     );

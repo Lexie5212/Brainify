@@ -1,18 +1,21 @@
+import 'package:brainify/core/app/theme_provider.dart';
 import 'package:brainify/core/config/assets_constants.dart';
 import 'package:brainify/core/extension/context.dart';
 import 'package:brainify/feature/home/widgets/background_curves_painter.dart';
 import 'package:brainify/feature/welcome/widgets/api_key_bottom_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class WelcomePage extends StatelessWidget {
+class WelcomePage extends ConsumerWidget {
   const WelcomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Padding(
+          // ignore: use_named_constants
           padding: const EdgeInsets.all(0),
           child: Stack(
             children: [
@@ -123,6 +126,16 @@ class WelcomePage extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Positioned(
+                top: 20,
+                right: 20,
+                child: FloatingActionButton(
+                  onPressed: () => 
+                    ref.read(themeProvider.notifier).toggleTheme(),
+                  mini: true,
+                  child: const Icon(Icons.brightness_6), 
                 ),
               ),
             ],
