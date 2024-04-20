@@ -251,7 +251,7 @@ class _HomePageState extends ConsumerState<HomePage> {
                           ],
                         ),
                         const SizedBox(
-                          height: 16,
+                          height: 11,
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8),
