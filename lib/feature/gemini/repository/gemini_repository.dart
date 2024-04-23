@@ -18,10 +18,7 @@ class GeminiRepository extends BaseGeminiRepository {
   static const baseUrl =
       'https://generativelanguage.googleapis.com/v1beta/models';
 
-  /// Streams content from the Gemini API based on the provided content
-  /// and optional image.
-  /// This method is used to generate content dynamically, potentially
-  /// including image analysis.
+
   @override
   Stream<Candidates> streamContent({
     required Content content,
@@ -143,10 +140,7 @@ class GeminiRepository extends BaseGeminiRepository {
     }
   }
 
-  /// Processes a batch of text chunks to generate embeddings,
-  /// which are then returned in a map.
-  /// This method is useful for pre-processing text data for
-  /// further analysis or comparison.
+
   @override
   Future<Map<String, List<num>>> batchEmbedChunks({
     required List<String> textChunks,
@@ -194,10 +188,7 @@ class GeminiRepository extends BaseGeminiRepository {
     }
   }
 
-  /// Generates a prompt for embedding based on the user's input and
-  /// the pre-calculated embeddings.
-  /// This method is designed to facilitate user interaction by
-  /// providing contextually relevant prompts.
+
   @override
   Future<String> promptForEmbedding({
     required String userPrompt,
@@ -271,10 +262,7 @@ If you don't know the answer, just say "I don't know" or "I'm not sure".
     }
   }
 
-  /// Calculates the Euclidean distance between two vectors,
-  /// providing a measure of similarity.
-  /// This method is essential for operations like finding
-  /// the closest embeddings.
+
   @override
   double calculateEuclideanDistance({
     required List<num> vectorA,

@@ -21,34 +21,34 @@ const _surfaceTint=Color(0x5A755DC3);
 
 final _darkColorScheme = ColorScheme(
   brightness: Brightness.dark,
-  // Primary
+
   primary: _primary,
   onPrimary: _lightest,
   primaryContainer: _primary.withOpacity(0.2),
   onPrimaryContainer: _lightest,
-  // Secondary
+
   secondary: _secondary,
   onSecondary: _lightest,
   secondaryContainer: _secondary.withOpacity(0.2),
   onSecondaryContainer: _lightest,
 
-  // Tertiary
+
   tertiary: _tertiary,
   onTertiary: _lightest,
   tertiaryContainer: _tertiary.withOpacity(0.2),
   onTertiaryContainer: _lightest,
 
-  // Error
+
   error: _red,
   onError: _lightest,
-  // Background
+
   background: _background,
   onBackground: _onBackground,
-  // Surface
+
   surface: _darkest,
   onSurface: _lightest,
   surfaceTint:_surfaceTint ,
-  // Outline
+
   outline: _divider,
 );
 
@@ -228,7 +228,7 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
   const labelColor = titleColor;
 
   const textTheme = TextTheme(
-    // Headline
+
     headlineLarge: TextStyle(
       fontSize: 24,
       height: headlineHeight,
@@ -251,7 +251,7 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
       fontWeight: headlineWeight,
     ),
 
-    // Title
+
     titleLarge: TextStyle(
       fontSize: 20,
       height: titleHeight,
@@ -274,7 +274,7 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
       fontWeight: titleWeight,
     ),
 
-    // Body
+
     bodyLarge: TextStyle(
       fontSize: 16,
       height: bodyHeight,
@@ -296,7 +296,7 @@ TextTheme _getTextTheme(ColorScheme colorScheme) {
       fontWeight: bodyWeight,
     ),
 
-    // Label
+
     labelLarge: TextStyle(
       fontSize: 16,
       height: bodyHeight,

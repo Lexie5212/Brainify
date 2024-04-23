@@ -111,15 +111,14 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     final chatBotsList = ref.watch(chatBotListProvider);
 
-    // Determine the container's decoration properties based on the theme mode
     final Color backgroundColor = 
       Theme.of(context).brightness == Brightness.light
-        ? context.colorScheme.onSurfaceVariant // Light mode background color
-        : context.colorScheme.surfaceTint; // Dark mode background color
+        ? context.colorScheme.onSurfaceVariant 
+        : context.colorScheme.surfaceTint; 
     // ignore: lines_longer_than_80_chars, non_constant_identifier_names
     final Color TextStyleColor = Theme.of(context).brightness == Brightness.light
-        ? Colors.black // Light mode shadow color
-        : Colors.white; // Dark mode shadow color
+        ? Colors.black 
+        : Colors.white; 
 
     return Scaffold(
       resizeToAvoidBottomInset: true,
@@ -169,8 +168,8 @@ class _HomePageState extends ConsumerState<HomePage> {
                                 color: 
                                   Theme.of(context).brightness 
                                     == Brightness.light
-                                    ? Colors.grey // Color for light mode
-                                    : Colors.white, // Color for dark mode
+                                    ? Colors.grey 
+                                    : Colors.white, 
                               ),
                               onPressed: () => 
                                 ref.read(themeProvider.notifier).toggleTheme(),
@@ -290,7 +289,6 @@ class _HomePageState extends ConsumerState<HomePage> {
                                     imagePath: AssetConstants.pdfLogo,
                                     isMainButton: false,
                                     onPressed: () async {
-                                      // ... your existing code ...
                                       final result =
                                       await FilePicker.platform.pickFiles(
                                     type: FileType.custom,

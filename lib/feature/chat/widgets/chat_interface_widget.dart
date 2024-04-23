@@ -32,8 +32,8 @@ class ChatInterfaceWidget extends ConsumerWidget {
     final Color adjustedColor = _getAdjustedColor(context);
     final Color InputTextColor = 
       Theme.of(context).brightness == Brightness.light
-        ? Colors.indigo // Light mode background color
-        : Colors.pink.shade50; // Dark mode background color
+        ? Colors.indigo 
+        : Colors.pink.shade50; 
     return Chat(
       messages: messages,
       onSendPressed: (text) =>

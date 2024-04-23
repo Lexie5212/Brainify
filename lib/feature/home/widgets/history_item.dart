@@ -23,8 +23,8 @@ class HistoryItem extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final Color backgroundColor = 
       Theme.of(context).brightness == Brightness.light
-        ? const Color(0xFFF1E9F2) // Light mode background color
-        : context.colorScheme.surfaceTint; // Dark mode background color
+        ? const Color(0xFFF1E9F2) 
+        : context.colorScheme.surfaceTint; 
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
@@ -45,7 +45,7 @@ class HistoryItem extends ConsumerWidget {
           AppRoute.chat.push(context);
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor, // Use the dynamic background color，
+          backgroundColor: backgroundColor, 
           foregroundColor: color,
           elevation: 4,
           shape: RoundedRectangleBorder(
