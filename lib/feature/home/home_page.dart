@@ -10,7 +10,7 @@ import 'package:brainify/feature/chat/provider/message_provider.dart';
 import 'package:brainify/feature/hive/model/chat_bot/chat_bot.dart';
 import 'package:brainify/feature/home/provider/chat_bot_provider.dart';
 import 'package:brainify/feature/home/widgets/widgets.dart';
-import 'package:brainify/feature/welcome/widgets/api_key_bottom_sheet.dart';
+import 'package:brainify/feature/welcome/widgets/api_key_sheet.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

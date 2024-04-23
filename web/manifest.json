@@ -1,6 +1,6 @@
 {
-    "name": "ai_buddy",
-    "short_name": "ai_buddy",
+    "name": "brainify",
+    "short_name": "brainify",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

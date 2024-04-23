@@ -2,7 +2,7 @@ import 'package:brainify/core/app/theme_provider.dart';
 import 'package:brainify/core/config/assets_constants.dart';
 import 'package:brainify/core/extension/context.dart';
 import 'package:brainify/feature/home/widgets/background_curves_painter.dart';
-import 'package:brainify/feature/welcome/widgets/api_key_bottom_sheet.dart';
+import 'package:brainify/feature/welcome/widgets/api_key_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

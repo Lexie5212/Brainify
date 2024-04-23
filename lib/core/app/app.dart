@@ -3,8 +3,7 @@ import 'package:brainify/core/navigation/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-// class Brainify extends StatelessWidget {
-//   const Brainify({super.key});
+
 class Brainify extends ConsumerWidget {
   const Brainify({super.key});
 

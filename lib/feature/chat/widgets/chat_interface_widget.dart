@@ -30,6 +30,7 @@ class ChatInterfaceWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final Color adjustedColor = _getAdjustedColor(context);
+    // ignore: non_constant_identifier_names
     final Color InputTextColor = 
       Theme.of(context).brightness == Brightness.light
         ? Colors.indigo 

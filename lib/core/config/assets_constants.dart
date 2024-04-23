@@ -2,7 +2,7 @@ class AssetConstants {
   AssetConstants._();
 
   static const String baseImageUrl = 'assets/images';
-  static const String baseAnimationUrl = 'assets/animations';
+
 
   static const String aiKittyLogo = '$baseImageUrl/ai_kitty_logo.png';
   static const String pdfLogo = '$baseImageUrl/pdf_logo.png';
